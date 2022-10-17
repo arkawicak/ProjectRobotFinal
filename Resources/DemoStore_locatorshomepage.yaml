@@ -1,0 +1,6 @@
+TopBanner: //*[contains(@class,'banner')]
+ContactUs: //*[@id='contact-link']
+Search: //*[@id='search_query_top']
+Cart: //*[contains(@class,'shopping')]
+ProductItem: (//*[contains(@class,'product-image-container')])[2]
+Footer: //*[contains(@class,'footer-container')]

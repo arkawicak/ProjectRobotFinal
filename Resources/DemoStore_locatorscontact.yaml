@@ -1,0 +1,8 @@
+SubjectHeading: //*[@id='id_contact'] 
+Email: //*[@id='email']
+OrderRef: //*[@id='id_order']
+Upload: //*[@id='fileUpload']
+Message: //*[@id='message']
+Send: //*[@id='submitMessage'] 
+SuccessMessage: //*[@class='alert alert-success']
+ContactUsMenu: //*[@id='contact-link'] 

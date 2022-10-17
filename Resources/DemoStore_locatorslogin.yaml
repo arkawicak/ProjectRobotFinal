@@ -1,0 +1,4 @@
+Email: //input[@id="email"]
+Password: //input[@id="passwd"]
+Login: //*[@id="SubmitLogin"]
+ErrorMessage: (//*[contains(@class,'alert')])[1]
