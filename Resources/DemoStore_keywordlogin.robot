@@ -1,7 +1,6 @@
 *** Settings ***
 Library                    SeleniumLibrary
 Variables                  ../Resources/DemoStore_locatorslogin.yaml
-Variables                  ../Resources/DemoStore_locatorsregister.yaml
 
 *** Variables ***
 # ${DEMOSAUCE_URL}            http://automationpractice.com/index.php
