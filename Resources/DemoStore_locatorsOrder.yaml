@@ -1,0 +1,4 @@
+CartElement: //*[@title="Add to cart" and @data-id-product="1"]
+CartButton: //*[@title="Add to cart" and @data-id-product="1"]
+WomenButton: //*[@title="Women" and text()="Women"]
+CheckoutButton:  //*[@title="Proceed to checkout"]
