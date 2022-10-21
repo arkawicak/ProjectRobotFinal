@@ -11,9 +11,7 @@ User Should Be Able To Register
     Radio Button Is Selected
     Enter Valid FirstName
     Enter Valid Password 
-    Select Valid Days
-    Select Valid Months
-    Select Valid Year
+    User Can Input DOB
     Select Valid Checkbox
     Enter Valid Firstname In Section Address
     Enter Valid Lastname In Section Address

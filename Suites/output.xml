@@ -1,118 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221013 21:16:42.207" rpa="false" schemaversion="3">
-<suite id="s1" name="Contact Us" source="D:\Bootcamp dojobox\Web Auto Robot\Project RObot\ProjectRobotFinal\suites\contact_us.robot">
-<test id="s1-t1" name="User Should Be Enter valid Contact" line="8">
+<robot generator="Robot 5.0.1 (Python 3.10.6 on win32)" generated="20221021 10:59:06.898" rpa="false" schemaversion="3">
+<suite id="s1" name="Order" source="D:\Bootcamp dojobox\Web Auto Robot\Project RObot\ProjectRobotFinal\suites\order.robot">
+<test id="s1-t1" name="User Should be Able to Order Product" line="9">
 <kw name="Open Browser With Google Chrome" library="DemoStore_keywordregister" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>url=${DEMOSAUCE_URL}</arg>
 <arg>browser=${DEMOSAUCE_BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20221013 21:16:42.631" level="INFO">Opening browser 'gc' to base url 'http://automationpractice.com/index.php'.</msg>
-<status status="PASS" starttime="20221013 21:16:42.630" endtime="20221013 21:16:54.930"/>
+<msg timestamp="20221021 10:59:07.097" level="INFO">Opening browser 'gc' to base url 'http://automationpractice.com/index.php'.</msg>
+<status status="PASS" starttime="20221021 10:59:07.096" endtime="20221021 10:59:18.831"/>
 </kw>
-<status status="PASS" starttime="20221013 21:16:42.629" endtime="20221013 21:16:54.930"/>
+<status status="PASS" starttime="20221021 10:59:07.096" endtime="20221021 10:59:18.831"/>
 </kw>
-<kw name="Click Contact Us Menu" library="DemoStore_keywordcontact">
+<kw name="Click Sign In Menu" library="DemoStore_keywordregister">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${ContactUsMenu}</arg>
+<arg>${SignInMenu}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221013 21:16:54.933" level="INFO">Clicking element '//*[@id='contact-link']'.</msg>
-<status status="PASS" starttime="20221013 21:16:54.932" endtime="20221013 21:16:57.963"/>
+<msg timestamp="20221021 10:59:18.832" level="INFO">Clicking element '//*[@class="login"]'.</msg>
+<status status="PASS" starttime="20221021 10:59:18.831" endtime="20221021 10:59:22.617"/>
 </kw>
-<status status="PASS" starttime="20221013 21:16:54.931" endtime="20221013 21:16:57.964"/>
+<status status="PASS" starttime="20221021 10:59:18.831" endtime="20221021 10:59:22.617"/>
 </kw>
-<kw name="Verify Contact Us Page" library="DemoStore_keywordcontact">
-<kw name="Location Should Be" library="SeleniumLibrary">
-<arg>${Contact_URL}</arg>
-<doc>Verifies that the current URL is exactly ``url``.</doc>
-<msg timestamp="20221013 21:16:57.979" level="INFO">Current location is 'http://automationpractice.com/index.php?controller=contact'.</msg>
-<status status="PASS" starttime="20221013 21:16:57.965" endtime="20221013 21:16:57.979"/>
-</kw>
-<status status="PASS" starttime="20221013 21:16:57.964" endtime="20221013 21:16:57.980"/>
-</kw>
-<kw name="Verify Select Subject Heading" library="DemoStore_keywordcontact">
-<kw name="Select From List By Value" library="SeleniumLibrary">
-<arg>${SubjectHeading}</arg>
-<arg>2</arg>
-<doc>Selects options from selection list ``locator`` by ``values``.</doc>
-<msg timestamp="20221013 21:16:57.982" level="INFO">Selecting options from selection list '//*[@id='id_contact']' by value 2.</msg>
-<status status="PASS" starttime="20221013 21:16:57.981" endtime="20221013 21:16:58.154"/>
-</kw>
-<status status="PASS" starttime="20221013 21:16:57.980" endtime="20221013 21:16:58.156"/>
-</kw>
-<kw name="Verify Input Email" library="DemoStore_keywordcontact">
+<kw name="Input Username Field" library="DemoStore_keywordlogin">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Email}</arg>
 <arg>text=arkawicak@gmail.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221013 21:16:58.158" level="INFO">Typing text 'arkawicak@gmail.com' into text field '//*[@id='email']'.</msg>
-<status status="PASS" starttime="20221013 21:16:58.157" endtime="20221013 21:16:58.414"/>
+<msg timestamp="20221021 10:59:22.618" level="INFO">Typing text 'arkawicak@gmail.com' into text field '//input[@id="email"]'.</msg>
+<status status="PASS" starttime="20221021 10:59:22.618" endtime="20221021 10:59:22.729"/>
 </kw>
-<status status="PASS" starttime="20221013 21:16:58.156" endtime="20221013 21:16:58.414"/>
+<status status="PASS" starttime="20221021 10:59:22.618" endtime="20221021 10:59:22.729"/>
 </kw>
-<kw name="Verify Input Order Reference" library="DemoStore_keywordcontact">
+<kw name="Input Password Field" library="DemoStore_keywordlogin">
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${OrderRef}</arg>
-<arg>text=belajartest</arg>
+<arg>${Password}</arg>
+<arg>text=12345</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221013 21:16:58.416" level="INFO">Typing text 'belajartest' into text field '//*[@id='id_order']'.</msg>
-<status status="PASS" starttime="20221013 21:16:58.416" endtime="20221013 21:16:58.616"/>
+<msg timestamp="20221021 10:59:22.730" level="INFO">Typing text '12345' into text field '//input[@id="passwd"]'.</msg>
+<status status="PASS" starttime="20221021 10:59:22.730" endtime="20221021 10:59:22.813"/>
 </kw>
-<status status="PASS" starttime="20221013 21:16:58.415" endtime="20221013 21:16:58.617"/>
+<status status="PASS" starttime="20221021 10:59:22.730" endtime="20221021 10:59:22.813"/>
 </kw>
-<kw name="Verify Upload File" library="DemoStore_keywordcontact">
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>${Upload}</arg>
-<arg>D:/Bootcamp dojobox/Web Auto Robot/Project RObot/ProjectRobotFinal/Resources/Aset/Planet9_3840x2160.jpg</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20221013 21:16:58.619" level="INFO">Sending D:\Bootcamp dojobox\Web Auto Robot\Project RObot\ProjectRobotFinal\Resources\Aset\Planet9_3840x2160.jpg to browser.</msg>
-<status status="PASS" starttime="20221013 21:16:58.618" endtime="20221013 21:16:58.716"/>
-</kw>
-<status status="PASS" starttime="20221013 21:16:58.617" endtime="20221013 21:16:58.716"/>
-</kw>
-<kw name="Verify Input Message" library="DemoStore_keywordcontact">
-<kw name="Input Text" library="SeleniumLibrary">
-<arg>${Message}</arg>
-<arg>text=saya baru belajar</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20221013 21:16:58.718" level="INFO">Typing text 'saya baru belajar' into text field '//*[@id='message']'.</msg>
-<status status="PASS" starttime="20221013 21:16:58.718" endtime="20221013 21:16:58.946"/>
-</kw>
-<status status="PASS" starttime="20221013 21:16:58.717" endtime="20221013 21:16:58.946"/>
-</kw>
-<kw name="Verify Click Button Send" library="DemoStore_keywordcontact">
+<kw name="Click Login Button" library="DemoStore_keywordlogin">
 <kw name="Click Element" library="SeleniumLibrary">
-<arg>${Send}</arg>
+<arg>${Login}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20221013 21:16:58.947" level="INFO">Clicking element '//*[@id='submitMessage']'.</msg>
-<status status="PASS" starttime="20221013 21:16:58.947" endtime="20221013 21:17:25.298"/>
+<msg timestamp="20221021 10:59:22.814" level="INFO">Clicking element '//*[@id="SubmitLogin"]'.</msg>
+<status status="PASS" starttime="20221021 10:59:22.814" endtime="20221021 10:59:25.509"/>
 </kw>
-<status status="PASS" starttime="20221013 21:16:58.946" endtime="20221013 21:17:25.299"/>
+<status status="PASS" starttime="20221021 10:59:22.814" endtime="20221021 10:59:25.509"/>
 </kw>
-<kw name="Verify Success Message" library="DemoStore_keywordcontact">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${SuccessMessage}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20221013 21:17:25.300" endtime="20221013 21:17:25.362"/>
+<kw name="Click Element Women" library="DemoStore_keywordOrder">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${WomenButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221021 10:59:25.511" level="INFO">Clicking element '//*[@title="Women" and text()="Women"]'.</msg>
+<status status="PASS" starttime="20221021 10:59:25.509" endtime="20221021 10:59:28.392"/>
 </kw>
+<status status="PASS" starttime="20221021 10:59:25.509" endtime="20221021 10:59:28.392"/>
+</kw>
+<kw name="Check Element Cart Is Appears" library="DemoStore_keywordOrder">
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
-<arg>${SuccessMessage}</arg>
+<arg>${CartElement}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20221013 21:17:25.391" level="INFO">Element '//*[@class='alert alert-success']' is displayed.</msg>
-<status status="PASS" starttime="20221013 21:17:25.362" endtime="20221013 21:17:25.391"/>
+<msg timestamp="20221021 10:59:28.420" level="INFO">Element '//*[@title="Add to cart" and @data-id-product="1"]' is displayed.</msg>
+<status status="PASS" starttime="20221021 10:59:28.393" endtime="20221021 10:59:28.420"/>
 </kw>
-<status status="PASS" starttime="20221013 21:17:25.299" endtime="20221013 21:17:25.391"/>
+<status status="PASS" starttime="20221021 10:59:28.392" endtime="20221021 10:59:28.420"/>
+</kw>
+<kw name="Click Element Cart" library="DemoStore_keywordOrder">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CartButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221021 10:59:28.422" level="INFO">Clicking element '//*[@title="Add to cart" and @data-id-product="1"]'.</msg>
+<status status="PASS" starttime="20221021 10:59:28.422" endtime="20221021 10:59:28.465"/>
+</kw>
+<status status="PASS" starttime="20221021 10:59:28.422" endtime="20221021 10:59:28.465"/>
 </kw>
 <kw name="Close Google Chrome Browser" library="DemoStore_keywordregister" type="TEARDOWN">
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20221013 21:17:25.394" endtime="20221013 21:17:28.747"/>
+<status status="PASS" starttime="20221021 10:59:28.466" endtime="20221021 10:59:30.645"/>
 </kw>
-<status status="PASS" starttime="20221013 21:17:25.394" endtime="20221013 21:17:28.747"/>
+<status status="PASS" starttime="20221021 10:59:28.466" endtime="20221021 10:59:30.646"/>
 </kw>
-<status status="PASS" starttime="20221013 21:16:42.627" endtime="20221013 21:17:28.747"/>
+<status status="PASS" starttime="20221021 10:59:07.095" endtime="20221021 10:59:30.646"/>
 </test>
-<status status="PASS" starttime="20221013 21:16:42.208" endtime="20221013 21:17:28.751"/>
+<status status="PASS" starttime="20221021 10:59:06.899" endtime="20221021 10:59:30.649"/>
 </suite>
 <statistics>
 <total>
@@ -121,7 +95,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Contact Us">Contact Us</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="Order">Order</stat>
 </suite>
 </statistics>
 <errors>

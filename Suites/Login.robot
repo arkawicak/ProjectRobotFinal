@@ -1,8 +1,8 @@
 *** Settings ***
 Resource           ../Resources/DemoStore_keywordlogin.robot
 Resource           ../Resources/DemoStore_keywordregister.robot
-Test Setup        Demostore_keywordregister.Open Browser With Google Chrome
-Test Teardown     Demostore_keywordregister.Close Google Chrome Browser
+Test Setup         Open Browser With Google Chrome
+Test Teardown      Close Google Chrome Browser
 
 *** Test Cases ***
 User Should Be Able To Login
