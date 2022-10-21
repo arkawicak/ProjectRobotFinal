@@ -34,16 +34,15 @@ Enter Valid FirstName
 Enter Valid Password  
     Input Text                    ${PasswordRegister}    Text=12345  
 
-Select Valid Days
+
+User Can Input DOB
     Select From List By Value        ${Days}            18   
-
-Select Valid Months
-    Select From List By Value        ${Months}        8
-
-Select Valid Year
     # untuk locator variabel
-    [Arguments]                      ${Year}=1990 
-    Select From List By Value        ${Years.format("${Year}")} 
+    [Arguments]                      ${Year}=1990             ${bulan}=10
+    Click Element           ${Years.format("${Year}")} 
+    Sleep                     5s
+    Click Element            ${Months.format("${bulan}")}        8
+    Sleep                    5s
 
 Select Valid Checkbox
     Select Checkbox                ${Checkbox}
